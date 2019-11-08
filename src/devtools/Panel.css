@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#main {
+	/* margin: 16px; */
+}
+
+#dev {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+#actions {
+	padding: 8px;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+#log_eval {
+	height: 32px;
+	max-width: 100%;
+	overflow-x: hidden;
+	padding: 4px;
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.tree_content {
+	padding: 8px;
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.history_item {
+	color: #b2bec3;
+	padding: 4px 8px;
+	border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.history_item .action {
+	color: #a29bfe;
+}
+
+.history_item .path {
+	color: #00b894;
+	font-weight: 600;
+}
+
+.history_item .value {
+	color: #6c5ce7;
+	/* font-weight: 600; */
+}
