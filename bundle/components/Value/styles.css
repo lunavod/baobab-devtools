@@ -1,0 +1,15 @@
+.main {
+	
+}
+
+.undefined, .null {
+	color: rgb(128, 128, 128);
+}
+
+.number, .boolean {
+	color: rgb(28, 0, 207);
+}
+
+.string {
+	color: rgb(196, 26, 22);
+}

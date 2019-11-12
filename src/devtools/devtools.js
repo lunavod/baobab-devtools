@@ -1,7 +1,6 @@
-chrome.devtools.panels.create("Baobab",
-    "",
-    "src/devtools/Panel.html",
-    function(panel) {
-		
-    }
-);
+chrome.devtools.panels.create(
+	'Baobab',
+	'',
+	'src/devtools/Panel.html',
+	function() {}
+)

@@ -1,0 +1,58 @@
+.field {
+	display: inline-flex;
+}
+
+.field.multiline {
+	flex-direction: column;
+}
+
+.field.foldable > span > .name {
+	cursor: pointer;
+}
+
+.field.multiline > span:nth-child(2) {
+	padding-left: 2ch;
+}
+
+.object, .array {
+	display: inline-flex;
+	flex-direction: column;
+	position: relative;
+	
+}
+
+.number, .string {
+	display: inline-flex;
+	flex-direction: column;
+	margin-left: .5ch;
+}
+
+/* .object::before {
+	content: '{';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.object::after {
+	content: '}';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+} */
+
+.name {
+	color: rgb(136, 19, 145);
+}
+
+
+.string, .number {
+	color: rgb(28, 0, 207);
+}
+.value {
+	/* padding-left: 4ch; */
+}
+
+.secondary {
+	color: hsl(0, 0%, 46%);
+}

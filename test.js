@@ -1,0 +1,1 @@
+console.log(require('./dist/views.js'))

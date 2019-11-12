@@ -1,5 +1,15 @@
 body {
 	margin: 0;
+	font-family: 'Segoe UI', Tahoma, sans-serif;
+	font-size: 75%;
+}
+
+body.col-resize {
+	cursor: col-resize;
+}
+
+body.col-resize * {
+	user-select: none;
 }
 
 * {
@@ -17,8 +27,15 @@ body {
 }
 
 #actions {
-	padding: 8px;
+	padding: 6px;
 	border-bottom: 1px solid rgba(0,0,0,.1);
+	background: #f3f3f3;
+}
+
+#actions a {
+	text-decoration: none;
+	color: #333;
+	margin-right: 8px;
 }
 
 #log_eval {

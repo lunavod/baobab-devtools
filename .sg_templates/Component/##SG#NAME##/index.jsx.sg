@@ -1,0 +1,21 @@
+import React from 'react'
+
+import styles from './styles.css'
+// import PropTypes from 'prop-types'
+##SG#IF(BRANCH)##import {useBranch} from 'baobab-react/hooks'##SG#ENDIF(BRANCH)##
+
+/**
+ * ##SG#NAME## react component
+ */
+function ##SG#NAME##() {
+	##SG#IF(BRANCH)##const {} = useBranch({
+
+	})##SG#ENDIF(BRANCH)##
+	return <div className={styles.main}>This is ##SG#NAME##</div>
+}
+
+##SG#NAME##.propTypes = {
+
+}
+
+export default ##SG#NAME##

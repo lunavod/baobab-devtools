@@ -1,34 +1,41 @@
+console.log('TRUE SPY IS HERE!', new Date().getSeconds())
 
-console.log('TRUE SPY IS HERE!', (new Date()).getSeconds())
+function sendMessage(obj) {
+	window.postMessage(
+		{
+			...obj,
+			source: 'my-devtools-extension'
+		},
+		'*'
+	)
+}
 
-function registerBaobabStore(tree, id) {
-	tree.on('update', (e) => {
+function registerBaobabStore(tree, id) { // eslint-disable-line no-unused-vars
+	tree.on('update', e => {
 		let data = {
 			...e.data
 		}
 		data.transaction.forEach((update, index) => {
-			if (update.type=="apply") data.transaction[index].value = ""
+			if (update.type == 'apply') data.transaction[index].value = ''
 		})
+		data.time = new Date()
 		console.log('UPDATE', e)
-		window.postMessage({
+		sendMessage({
 			event: 'update',
 			data: data,
-			tree_id: id,
-			source: 'my-devtools-extension'
-		  }, '*');
+			tree_id: id
+		})
 	})
-	window.postMessage({
+	sendMessage({
 		event: 'initial_data',
-		data: {currentData: tree.get()},
-		tree_id: id,
-		source: 'my-devtools-extension'
-	  }, '*');
+		data: { currentData: tree.get() },
+		tree_id: id
+	})
 	console.log('Store registered!')
 }
 
 document.dispatchEvent(new CustomEvent('baobabExtensionReady'))
 
-window.postMessage({
-	greeting: 'hello there!',
-	source: 'my-devtools-extension'
-  }, '*');
+sendMessage({
+	greeting: 'hello there!'
+})

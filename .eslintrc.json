@@ -1,0 +1,97 @@
+{
+	"env": {
+	  "browser": true,
+	  "es6": true,
+	  "node": true
+	},
+	"extends": [
+	  "eslint:recommended",
+	  "plugin:react/recommended",
+	  "plugin:import/errors",
+	  "plugin:import/warnings",
+	  "plugin:sonarjs/recommended",
+	  "plugin:css-modules/recommended"
+	],
+	"globals": {
+	  "Atomics": "readonly",
+	  "SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+	  "ecmaFeatures": {
+		"jsx": true,
+		"modules": true
+	  },
+	  "modules": true,
+	  "experimentalObjectRestSpread": true,
+	  "ecmaVersion": 2018,
+	  "sourceType": "module"
+	},
+	"plugins": [
+	  "react",
+	  "class-property",
+	  "sonarjs",
+	  "no-use-extend-native",
+	  "promise",
+	  "css-modules"
+	],
+	"rules": {
+	  "indent": [
+		"error",
+		"tab",
+		{
+			"SwitchCase": 1
+		}
+	  ],
+	  "quotes": [
+		"error",
+		"single"
+	  ],
+	  "semi": [
+		"error",
+		"never"
+	  ],
+	  "react/jsx-uses-react": "error",
+	  "react/jsx-uses-vars": "error",
+	  "no-warning-comments": "warn",
+	  "promise/always-return": "error",
+	  "promise/no-return-wrap": "error",
+	  "promise/param-names": "error",
+	  "promise/catch-or-return": "error",
+	  "promise/no-native": "off",
+	  "promise/no-nesting": "warn",
+	  "promise/no-promise-in-callback": "warn",
+	  "promise/no-callback-in-promise": "warn",
+	  "promise/avoid-new": "warn",
+	  "promise/no-new-statics": "error",
+	  "promise/no-return-in-finally": "warn",
+	  "promise/valid-params": "warn",
+	  "no-console": ["error", {"allow": ["log"]}],
+	  "jsdoc/require-returns": "off",
+	  "max-len": [2, 120]
+	},
+	"parser": "babel-eslint",
+	"settings": {
+	  "import/parser": "babel-eslint",
+	  "import/resolve": {
+		"moduleDirectory": [
+		  "node_modules",
+		  "src"
+		]
+	  },
+	  "react": {
+		"version": "16"
+	  },
+	  "import/resolver": {
+		  "alias": {
+			"map": [
+			  ["Utils", "./src/utils"]
+			]
+		  }
+		}
+	},
+	"globals": {
+		"isDev": true,
+		"chrome": {},
+		"views": {}
+	}
+  }

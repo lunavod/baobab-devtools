@@ -1,0 +1,11 @@
+.main {
+	padding: 16px;
+}
+
+.tree {
+	padding-left: 2ch;
+}
+
+.secondary {
+	color: hsl(0, 0%, 46%)
+}
